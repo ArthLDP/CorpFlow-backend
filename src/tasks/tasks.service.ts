@@ -59,15 +59,15 @@ export class TasksService {
     const task = await this.findOne(id);
     const newStatus = updateStatusDto.status;
     const currentStatus = task.status;
+
+    // Verificar se pode mover após 'APROVADO'
+    if (currentStatus == TaskStatus.APROVADO) {
+      throw new BadRequestException("Este bloco já foi aprovado, não é possível fazer mudanças");
+    }
     
     // Verificar se pode mover para 'APROVADO'
     if (newStatus === TaskStatus.APROVADO && currentStatus !== TaskStatus.VERIFICAR) {
       throw new BadRequestException("Este bloco precisa estar em 'Verificar' para ser aprovado");
-    }
-    
-    // Verificar se pode mover para 'FAZER_TAREFA'
-    if (newStatus === TaskStatus.FAZER_TAREFA && currentStatus !== TaskStatus.APROVADO) {
-      throw new BadRequestException("Este bloco precisa estar aprovado para arrastá-lo para 'Fazer tarefa'");
     }
     
     // Verificar permissão para aprovação (apenas gerentes)
