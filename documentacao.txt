@@ -1,0 +1,30 @@
+Endpoints da API:
+
+Autenticação:
+
+POST /auth/login - Login de usuário
+
+Usuários:
+
+GET /users - Listar todos os usuários
+GET /users/:id - Obter um usuário específico
+POST /users - Criar um novo usuário
+PATCH /users/:id - Atualizar um usuário
+DELETE /users/:id - Remover um usuário
+
+
+Tarefas:
+
+GET /tasks - Listar todas as tarefas
+GET /tasks/:id - Obter uma tarefa específica
+POST /tasks - Criar uma nova tarefa
+PATCH /tasks/:id - Atualizar uma tarefa
+PATCH /tasks/:id/status - Atualizar o status de uma tarefa
+DELETE /tasks/:id - Remover uma tarefa
+
+Usuários para Teste (nest start --entryFile seed):
+
+Gerente: username: gerente, senha: 123
+Usuário comum: username: usuario, senha: 123
+
+(http://localhost:3000/auth/login para login e http://localhost:3000/tasks para as tarefas).
