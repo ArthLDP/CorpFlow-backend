@@ -3,6 +3,7 @@ import { User } from '../../users/entities/user.entity';
 
 export enum TaskStatus {
   FAZER_TAREFA = 'FAZER_TAREFA',
+  EM_EXECUCAO = 'EM_EXECUCAO',
   VERIFICAR = 'VERIFICAR',
   APROVADO = 'APROVADO',
 }
