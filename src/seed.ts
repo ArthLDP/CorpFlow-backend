@@ -10,8 +10,8 @@ async function bootstrap() {
   try {
     // Criar usuário gerente
     await usersService.create({
-      username: 'gerente',
-      email: 'gerente@example.com',
+      username: 'Chefe',
+      email: 'chefe@example.com',
       password: '123',
       userType: UserType.GERENTE,
     });
@@ -19,8 +19,8 @@ async function bootstrap() {
     
     // Criar usuário comum
     await usersService.create({
-      username: 'usuario',
-      email: 'usuario@example.com',
+      username: 'Trabalhador',
+      email: 'Trabalhador@example.com',
       password: '123',
       userType: UserType.USUARIO,
     });

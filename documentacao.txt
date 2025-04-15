@@ -24,7 +24,7 @@ DELETE /tasks/:id - Remover uma tarefa
 
 Usuários para Teste (nest start --entryFile seed):
 
-Gerente: username: gerente, senha: 123
-Usuário comum: username: usuario, senha: 123
+Gerente: username: Chefe, senha: 123
+Usuário comum: username: Trabalhador, senha: 123
 
 (http://localhost:3000/auth/login para login e http://localhost:3000/tasks para as tarefas).
