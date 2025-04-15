@@ -28,6 +28,9 @@ export class Task {
   @Column()
   attributed_to: number;
 
+  @Column()
+  finalDate: Date;
+
   @ManyToOne(() => User, user => user.tasks)
   createdBy: User;
 
