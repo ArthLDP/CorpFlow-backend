@@ -25,6 +25,9 @@ export class Task {
   })
   status: TaskStatus;
 
+  @Column()
+  attributed_to: number;
+
   @ManyToOne(() => User, user => user.tasks)
   createdBy: User;
 
